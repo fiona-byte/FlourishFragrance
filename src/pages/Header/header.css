@@ -1,0 +1,35 @@
+.header {
+  height: 100vh;
+  /* background: url('../../assets/imgs/hero.png'); */
+  background: url('../../assets/imgs/hero2.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  /* background-position-y: 37%; */
+  background-position-y: 45%;
+}
+
+.header__hero {
+  padding: 8rem 8rem 0;
+}
+
+.header__hero--heading {
+  font-family: 'Playfair Display';
+  font-weight: 600;
+  font-size: 4.8rem;
+  color: #0d0d0d;
+}
+
+.header__hero--heading span {
+  display: block;
+}
+
+.header__hero--sub {
+  font-family: 'Source Sans Pro';
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 140%;
+  color: #1b2021;
+  width: 60%;
+  margin: 1.6rem 0 3rem;
+}
