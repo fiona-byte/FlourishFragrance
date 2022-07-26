@@ -1,0 +1,144 @@
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  background: #d8d9de;
+}
+
+body {
+  box-sizing: border-box;
+  color: #0d0d0d;
+  background: #d8d9de;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+/*                          Global Styles                        */
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input::-webkit-inner-spin-button,
+input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+}
+
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+section {
+  padding: 6rem 8rem;
+}
+
+.App {
+  overflow: hidden;
+}
+
+.heading {
+  color: #0d0d0d;
+  font-family: 'Playfair Display', serif;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  text-align: center;
+}
+
+.form__input {
+  padding: 1.2rem 1.5rem;
+  background: #f4f4f4;
+  border-radius: 15px;
+  color: #0d0d0d;
+  font-size: 1.8rem;
+  display: block;
+  outline: none;
+  width: 80%;
+  font-family: inherit;
+}
+
+.btn {
+  padding: 1.2rem 1.5rem;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #0d0d0d;
+  color: #f4f4f4;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.btn:disabled {
+  background-color: #eaedf0;
+  color: #a8abad;
+  cursor: not-allowed;
+}
+
+/*           Custom scroll bar          */
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 0;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f4f4f4;
+  border-radius: 15px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #0d0d0d;
+  border-radius: 5px;
+  height: 20px;
+}
+
+/*                  Media Queries                 */
+
+@media all and (max-width: 1200px) {
+  html {
+    font-size: 60%;
+  }
+}
+
+@media all and (max-width: 1024px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media all and (max-width: 768px) {
+  .heading {
+    font-size: 3.1rem;
+  }
+}
+
+@media all and (max-width: 500px) {
+  html {
+    font-size: 50%;
+  }
+
+  .heading {
+    font-size: 2.8rem;
+  }
+
+  section {
+    padding: 5rem 2rem 4rem;
+  }
+}
