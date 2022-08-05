@@ -19,6 +19,10 @@ export const FooterLogoContainer = styled.a`
   display: block;
   text-align: center;
   padding-bottom: 3.2rem;
+
+  @media only screen and (max-width: 500px) {
+    padding-bottom: 0rem;
+  }
 `;
 
 export const FooterLogo = styled.img`

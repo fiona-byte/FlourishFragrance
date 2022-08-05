@@ -110,8 +110,9 @@ export const ReviewsText = styled.p`
   color: #f4f4f4;
   padding-top: 4rem;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 500px) {
     font-size: 2rem;
-    line-height: 150%;
+    line-height: 162%;
+    padding-top: 3rem;
   }
 `;
