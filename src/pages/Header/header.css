@@ -10,7 +10,7 @@
 }
 
 .header__hero {
-  padding: 8rem 8rem 0;
+  padding: 8rem 7rem 0;
 }
 
 .header__hero--heading {
@@ -32,4 +32,42 @@
   color: #1b2021;
   width: 60%;
   margin: 1.6rem 0 3rem;
+}
+
+@media only screen and (max-width: 768px) {
+  .header__hero {
+    padding: 8rem 5rem 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header {
+    height: 85vh;
+  }
+
+  .header__hero {
+    padding: 6rem 5rem 0;
+  }
+
+  .header__hero--heading {
+    font-size: 3.6rem;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .header {
+    height: 70vh;
+  }
+
+  .header__hero {
+    padding: 6rem 2rem 0;
+  }
+
+  .header__hero--heading {
+    font-size: 3rem;
+  }
+
+  .header__hero--sub {
+    font-size: 1.8rem;
+  }
 }
