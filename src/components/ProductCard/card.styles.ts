@@ -9,6 +9,10 @@ export const ProductsCard = styled.div`
   border-radius: 8px;
   position: relative;
   margin-bottom: 6rem;
+
+  @media only screen and (max-width: 500px) {
+    margin-bottom: 4rem;
+  }
 `;
 
 export const Favourite = styled.button`
@@ -44,12 +48,20 @@ export const ProductName = styled.h3`
   font-size: 2.4rem;
   color: #0d0d0d;
   padding-bottom: 1.2rem;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProductPrice = styled.p`
   font-weight: 400;
   font-size: 2.2rem;
   color: #1b2021;
+
+  @media only screen and (max-width: 500px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProductButton = styledMUI(Button)`
