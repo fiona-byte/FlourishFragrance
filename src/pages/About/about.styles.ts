@@ -20,6 +20,6 @@ export const AboutText = styled.p`
 
   @media only screen and (max-width: 500px) {
     font-size: 1.6rem;
-    line-height: 150%;
+    line-height: 160%;
   }
 `;

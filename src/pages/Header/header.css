@@ -60,7 +60,7 @@
   }
 
   .header__hero {
-    padding: 6rem 2rem 0;
+    padding: 5rem 2rem 0;
   }
 
   .header__hero--heading {
@@ -76,6 +76,6 @@
 @media only screen and (max-width: 375px) {
   .header {
     height: 50vh;
-    background-position-y: 30%;
+    background-position-y: 35%;
   }
 }
