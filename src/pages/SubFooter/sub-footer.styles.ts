@@ -15,7 +15,7 @@ export const SubFooterSection = styled.section`
   align-items: center;
 
   @media only screen and (max-width: 500px) {
-    height: 50vh;
+    height: 45vh;
   }
 `;
 
