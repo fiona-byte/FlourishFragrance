@@ -1,11 +1,28 @@
 .navigation {
   background: #d8d9de;
   box-shadow: 0px 2px 3px rgba(0, 0, 0, 0.2);
-  padding: 1rem 6rem;
-  /* position: fixed;
+  padding: 1rem 5rem;
+  position: relative;
+  z-index: 99;
+}
+
+.navigation__scrolled {
+  position: fixed;
   width: 100%;
   top: 0;
-  left: 0; */
+  left: 0;
+  z-index: 99;
+}
+
+.navigation__btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  display: none;
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
 }
 
 .navigation__container {
@@ -31,4 +48,24 @@
 
 .navigation__logo {
   width: 85%;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    padding: 1.5rem 2rem;
+  }
+
+  .navigation__item {
+    display: none;
+  }
+
+  .navigation__btn {
+    display: block;
+    top: 2rem;
+    right: 2rem;
+  }
+
+  .navigation__logo {
+    width: 65%;
+  }
 }

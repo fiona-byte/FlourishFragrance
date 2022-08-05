@@ -42,7 +42,7 @@ input[type='number'] {
 }
 
 section {
-  padding: 6rem 8rem;
+  padding: 8rem;
 }
 
 .App {
@@ -55,7 +55,7 @@ section {
   font-size: 3.2rem;
   font-weight: 700;
   text-transform: capitalize;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   text-align: center;
 }
 
@@ -125,7 +125,7 @@ section {
 
 @media all and (max-width: 768px) {
   .heading {
-    font-size: 3.1rem;
+    font-size: 2.8rem;
   }
 }
 
@@ -135,10 +135,10 @@ section {
   }
 
   .heading {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
   }
 
   section {
-    padding: 5rem 2rem 4rem;
+    padding: 5rem 2rem;
   }
 }

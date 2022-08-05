@@ -10,15 +10,21 @@ import {
   Input,
   CTAButton,
   FooterCopy,
-} from './styles';
+  FooterSocialBox,
+  FooterSocialIcon,
+  FooterLogoContainer,
+} from './footer.styles';
 import logo from '../../assets/svgs/logo-white.svg';
+import instagram from '../../assets/svgs/instagram.svg';
+import whatsapp from '../../assets/svgs/whatsapp.svg';
+import telegram from '../../assets/svgs/telegram.svg';
 
 const Footer: React.FC = () => {
   return (
     <FooterContainer>
-      <FooterLogo>
-        <img src={logo} alt='logo' className='footer__logo' />
-      </FooterLogo>
+      <FooterLogoContainer>
+        <FooterLogo src={logo} alt='logo' />
+      </FooterLogoContainer>
       <FooterWrapper>
         <FooterBox>
           <FooterHeading>Quick links</FooterHeading>
@@ -48,6 +54,19 @@ const Footer: React.FC = () => {
             </FooterList>
             <FooterList>
               <FooterLink href='tel:+1 234 567 890'>+1 234 567 890</FooterLink>
+            </FooterList>
+            <FooterList>
+              <FooterSocialBox>
+                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                  <FooterSocialIcon src={instagram} alt='social-icon' />
+                </FooterLink>
+                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                  <FooterSocialIcon src={whatsapp} alt='social-icon' />
+                </FooterLink>
+                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                  <FooterSocialIcon src={telegram} alt='social-icon' />
+                </FooterLink>
+              </FooterSocialBox>
             </FooterList>
           </ul>
         </FooterBox>
