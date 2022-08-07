@@ -33,14 +33,14 @@ export const SubFooterHeader = styled.h2`
 `;
 
 export const SubFooterButton = styledMUI(Button)`
-    padding: 12px 20px;
+    padding: 1.2rem 2.4rem;
     background-color: #0D0D0D;
     border-radius: 8px;
     font-weight: 600;
     font-family: 'Source Sans Pro';
     font-size: 1.8rem;
     color: #f4f4f4;
-    text-transform: capitalize;
+    text-transform: unset;
     margin: 0 auto 1rem;
 
   :hover {
