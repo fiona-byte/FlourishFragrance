@@ -1,10 +1,14 @@
 import styled from 'styled-components';
 import { styled as styledMUI } from '@mui/material/styles';
-import { Box, Button } from '@mui/material';
+import { Box } from '@mui/material';
 
 export const ReviewsContainer = styled.section`
   background: #e4e3e3;
   padding: 8rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 6rem 5rem;
+  }
 
   @media only screen and (max-width: 500px) {
     padding: 5rem 2rem;
@@ -12,15 +16,40 @@ export const ReviewsContainer = styled.section`
 `;
 
 export const ReviewsBox = styledMUI(Box)`
-  background: #1B2021;
-  border-radius: 8px;
-  padding: 4rem 3.2rem;
   display: flex;
   justify-content: space-between;
   position: relative;
+  padding: 5rem 3.2rem 4rem;
   
+  @media only screen and (max-width: 768px) {
+    padding-right: 2.4rem;
+    max-width: 100%;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+  }
+
   @media only screen and (max-width: 500px) {
-    padding: 3.2rem 2.4rem;
+    padding: 4rem 2.4rem;
+  }
+`;
+
+export const ReviewContainer = styledMUI(Box)`
+  :first-child {
+    margin-right: 3rem;
+  }
+
+  :last-child {
+    margin-left: 3rem;
+  }
+
+  @media only screen and (max-width: 768px) {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 0;
+
+    :first-child {
+      margin-right: 0rem;
+    }
   }
 `;
 
@@ -30,8 +59,11 @@ export const ReviewSeperator = styled.hr`
   align-items: center;
   width: 1px;
   color: #f4f4f4;
-  margin-right: 5.6rem;
-  margin-right: 5.3rem;
+  margin: 2.7rem 5.3rem 0 5.6rem;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const ReviewProfileCard = styled.div`
@@ -114,5 +146,27 @@ export const ReviewsText = styled.p`
     font-size: 2rem;
     line-height: 162%;
     padding-top: 3rem;
+  }
+`;
+
+export const ReviewsDotsContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.6rem 0 3.2rem;
+`;
+
+export const ReviewsDots = styled.div`
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: #e4e3e3;
+
+  :first-child {
+    background-color: #f2ce16;
+  }
+
+  :not(:last-child) {
+    margin-right: 0.7rem;
   }
 `;

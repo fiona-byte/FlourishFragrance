@@ -72,7 +72,7 @@ export const ProductButton = styledMUI(Button)`
   font-family: 'Source Sans Pro';
   font-size: 1.8rem;
   color: #1b2021;
-  text-transform: capitalize;
+  text-transform: unset;
   width: 95%;
   margin-left: 2.5%;
   margin-bottom: 1rem;

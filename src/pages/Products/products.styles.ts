@@ -15,4 +15,5 @@ export const ProductText = styled.a`
   text-align: right;
   font-size: 2rem;
   color: #0d0d0d;
+  text-transform: capitalize;
 `;
