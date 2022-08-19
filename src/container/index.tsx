@@ -1,12 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import LandingPage from '../pages/LandingPage/landing-page';
-import MainApp from './mainApp';
+import { routePaths } from '../routes';
+import MainApp from './mainApp/mainApp';
 
 const Container = () => {
   return (
     <Routes>
       <Route path='/' element={<MainApp />}>
-        <Route path='/' element={<LandingPage />} />
+        {routePaths.map(({ path, Component }) => (
+          <Route key={path} path={path} element={Component} />
+        ))}
       </Route>
     </Routes>
   );
