@@ -3,7 +3,7 @@ import { styled as styledMUI } from '@mui/material/styles';
 import { Container, Box, Button } from '@mui/material';
 
 export const FooterContainer = styled.footer`
-  background-color: #0d0d0d;
+  background-color: #1b2021;
   padding: 8rem 7rem 4rem;
 
   @media only screen and (max-width: 900px) {

@@ -52,7 +52,7 @@
 
 @media only screen and (max-width: 768px) {
   .navigation {
-    padding: 1.5rem 2rem;
+    padding: 1.6rem 5rem;
   }
 
   .navigation__item {
@@ -62,10 +62,22 @@
   .navigation__btn {
     display: block;
     top: 2rem;
-    right: 2rem;
+    right: 5rem;
   }
 
   .navigation__logo {
     width: 65%;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .navigation {
+    padding: 1.6rem 2rem;
+  }
+
+  .navigation__btn {
+    display: block;
+    top: 2rem;
+    right: 2rem;
   }
 }
