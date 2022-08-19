@@ -15,9 +15,9 @@ const Hamburger = ({ className }: IconProps) => {
       <path
         d='M4.125 18.375H19.875M4.125 12.375H19.875M4.125 6.375H19.875'
         stroke='#0D0D0D'
-        stroke-width='1.5'
-        stroke-linecap='round'
-        stroke-linejoin='round'
+        strokeWidth='1.5'
+        strokeLinecap='round'
+        strokeLinejoin='round'
       />
     </svg>
   );
