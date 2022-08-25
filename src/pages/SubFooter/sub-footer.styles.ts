@@ -1,12 +1,11 @@
 import styled from 'styled-components';
 import { styled as styledMUI } from '@mui/material/styles';
 import { Button } from '@mui/material';
-import img from '../../assets/imgs/subFooterImg.png';
 
 export const SubFooterSection = styled.section`
   height: 85vh;
-  background: url(${img});
-  background: linear-gradient(0deg, rgba(27, 32, 33, 0.3), rgba(27, 32, 33, 0.3)), url(${img});
+  background: linear-gradient(0deg, rgba(27, 32, 33, 0.3), rgba(27, 32, 33, 0.3)),
+    url(${'https://res.cloudinary.com/dw4rdnuqh/image/upload/v1660999843/FlourishFragrance/subFooterImg_dyfom7.png'});
   background-position: center;
   background-attachment: fixed;
   display: flex;
