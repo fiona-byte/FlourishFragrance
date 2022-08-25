@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import Google from '../../assets/svgs/googleIcon';
 import {
   SignInButton,
@@ -11,6 +12,7 @@ import {
   SignInFormGroup,
   SignInLabel,
   GoogleButton,
+  SignInText,
 } from './signin.styles';
 
 const SignIn = () => {
@@ -37,8 +39,14 @@ const SignIn = () => {
               <SignInInput type='password' id='password' placeholder='Enter your password' />
               <span className='focus-border'></span>
             </SignInFormGroup>
-            <p className='signin__text'>Forgot password?</p>
+            <p className='signin__link'>Forgot password?</p>
             <SignInButton>Sign in</SignInButton>
+            <SignInText>
+              Don't have an account?{' '}
+              <Link to='/' className='signin__text--link'>
+                Sign up
+              </Link>
+            </SignInText>
           </SignInForm>
         </SignInContainer>
       </div>

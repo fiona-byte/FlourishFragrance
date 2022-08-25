@@ -1,7 +1,6 @@
 import styled, { css } from 'styled-components';
 import { styled as styledMUI } from '@mui/material/styles';
 import { Button } from '@mui/material';
-import bgImg from '../../assets/imgs/contact.jpg';
 
 const inputStyles = css`
   padding-bottom: 1rem;
@@ -40,7 +39,7 @@ export const Wrapper = styled.div`
   border-radius: 8px;
   margin: 5.6rem 8rem;
   padding: 0;
-  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)), url(${bgImg});
+  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)), url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661411426/FlourishFragrance/contact_j4zu7h.jpg);
   background-position-y: 30%;
   background-repeat: no-repeat;
   background-size: 50%;
