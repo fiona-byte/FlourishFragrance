@@ -122,7 +122,7 @@ export const SignInSpan = styled.span`
 export const SignInForm = styled.form`
   margin-top: 4rem;
 
-  & .signin__text {
+  & .signin__link {
     font-size: 1.6rem;
     color: #1b2021;
     text-align: right;
@@ -208,5 +208,18 @@ export const SignInButton = styledMUI(Button)`
 
   @media only screen and (max-width: 500px) {
     width: 100%;
+  }
+`;
+
+export const SignInText = styled.p`
+  font-weight: 400;
+  font-size: 2rem;
+  color: #1b2021;
+  text-align: center;
+
+  a {
+    font-weight: 600;
+    font-size: 2rem;
+    color: #1b2021;
   }
 `;

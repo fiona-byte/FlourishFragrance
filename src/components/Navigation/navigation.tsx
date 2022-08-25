@@ -1,7 +1,6 @@
 import { Link } from 'react-router-dom';
 import { HashLink as LinkH } from 'react-router-hash-link';
 import Hamburger from '../../assets/svgs/hamburger';
-import logo from '../../assets/svgs/logo.svg';
 import './navigation.css';
 
 const Navigation = () => {
@@ -30,7 +29,11 @@ const Navigation = () => {
         </ul>
         <div className='navigation__logo--container'>
           <Link to='/'>
-            <img src={logo} alt='logo' className='navigation__logo' />
+            <img
+              src='https://res.cloudinary.com/dw4rdnuqh/image/upload/v1660999508/FlourishFragrance/logo_opmwur.svg'
+              alt='logo'
+              className='navigation__logo'
+            />
           </Link>
         </div>
         <ul className='navigation__item'>

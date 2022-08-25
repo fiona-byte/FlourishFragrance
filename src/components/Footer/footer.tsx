@@ -14,7 +14,6 @@ import {
   FooterSocialIcon,
   FooterLogoContainer,
 } from './footer.styles';
-import logo from '../../assets/svgs/logo-white.svg';
 import instagram from '../../assets/svgs/instagram.svg';
 import whatsapp from '../../assets/svgs/whatsapp.svg';
 import telegram from '../../assets/svgs/telegram.svg';
@@ -23,7 +22,10 @@ const Footer: React.FC = () => {
   return (
     <FooterContainer>
       <FooterLogoContainer>
-        <FooterLogo src={logo} alt='logo' />
+        <FooterLogo
+          src='https://res.cloudinary.com/dw4rdnuqh/image/upload/v1660999508/FlourishFragrance/logo-white_ig6nk6.svg'
+          alt='logo'
+        />
       </FooterLogoContainer>
       <FooterWrapper>
         <FooterBox>
