@@ -48,7 +48,7 @@ const Navigation = () => {
             </a>
           </li>
           <li className='navigation__list'>
-            <a href='/sign-in' className='navigation__link'>
+            <a href='/signin' className='navigation__link'>
               Sign in
             </a>
           </li>

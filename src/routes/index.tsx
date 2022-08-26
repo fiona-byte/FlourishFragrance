@@ -20,7 +20,7 @@ export const routePaths: RouteProps[] = [
     exact: true,
   },
   {
-    path: '/sign-in',
+    path: '/signin',
     Component: <SignIn />,
     exact: true,
   },

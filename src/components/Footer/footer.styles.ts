@@ -75,7 +75,7 @@ export const FooterHeading = styled.h4`
 `;
 
 export const FooterList = styled.li`
-  :not(:first-child) {
+  :not(:first-of-type) {
     padding-top: 2.4rem;
   }
 `;
