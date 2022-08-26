@@ -34,7 +34,7 @@ export const ReviewsBox = styledMUI(Box)`
 `;
 
 export const ReviewContainer = styledMUI(Box)`
-  :first-child {
+  :first-of-type {
     margin-right: 3rem;
   }
 
@@ -47,7 +47,7 @@ export const ReviewContainer = styledMUI(Box)`
     width: 100%;
     flex-shrink: 0;
 
-    :first-child {
+    :first-of-type {
       margin-right: 0rem;
     }
   }
@@ -162,7 +162,7 @@ export const ReviewsDots = styled.div`
   border-radius: 50%;
   background-color: #e4e3e3;
 
-  :first-child {
+  :first-of-type {
     background-color: #f2ce16;
   }
 

@@ -137,7 +137,7 @@ export const SignInForm = styled.form`
 export const SignInFormGroup = styled.div`
   position: relative;
 
-  :first-child {
+  :first-of-type {
     margin-bottom: 4rem;
   }
 `;
