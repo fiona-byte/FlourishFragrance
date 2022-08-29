@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { styled as styledMUI } from '@mui/material/styles';
 import { Button } from '@mui/material';
-import bgImg from '../../assets/imgs/sign-in.jpg';
 
 export const Wrapper = styled.div`
   border-radius: 8px;
   margin: 5.6rem 8rem;
   padding: 0;
-  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)), url(${bgImg});
+  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)),
+    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661636105/FlourishFragrance/sign-in_qfapgg.jpg');
   background-position-x: right;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -158,6 +158,7 @@ export const SignInInput = styled.input`
   padding-bottom: 1rem;
   border: none;
   border-bottom: 2px solid #0d0d0d33;
+  color: #0D0D0D;
   background: transparent;
   outline: none;
   font-size: 1.8rem;
@@ -168,6 +169,14 @@ export const SignInInput = styled.input`
 
   @media only screen and (max-width: 500px) {
     font-size: 1.6rem;
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: ##0D0D0D !important;
   }
 
   & ~ .focus-border {
