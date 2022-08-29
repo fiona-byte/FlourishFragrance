@@ -18,6 +18,14 @@ const inputStyles = css`
     font-size: 1.6rem;
   }
 
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus,
+  &:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: ##0D0D0D !important;
+  }
+
   & ~ .focus-border {
     position: absolute;
     bottom: 0;
@@ -39,7 +47,8 @@ export const Wrapper = styled.div`
   border-radius: 8px;
   margin: 5.6rem 8rem;
   padding: 0;
-  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)), url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661411426/FlourishFragrance/contact_j4zu7h.jpg);
+  background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)),
+    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661411426/FlourishFragrance/contact_j4zu7h.jpg');
   background-position-y: 30%;
   background-repeat: no-repeat;
   background-size: 50%;

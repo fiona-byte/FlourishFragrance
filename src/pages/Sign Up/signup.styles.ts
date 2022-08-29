@@ -7,7 +7,7 @@ export const Wrapper = styled.div`
   margin: 5.6rem 8rem;
   padding: 0;
   background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)),
-    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661636105/FlourishFragrance/sign-in_qfapgg.jpg');
+    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661635967/FlourishFragrance/sign-up_rqmyjr.jpg');
   background-position-x: right;
   background-position-y: center;
   background-repeat: no-repeat;
@@ -28,7 +28,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const SignInContainer = styled.div`
+export const SignUpContainer = styled.div`
   background: #e4e3e3;
   padding: 4rem;
   width: 50%;
@@ -40,12 +40,11 @@ export const SignInContainer = styled.div`
   }
 `;
 
-export const SignInHeading = styled.h2`
+export const SignUpHeading = styled.h2`
   font-family: 'Playfair Display';
   font-weight: 600;
   font-size: 2.7rem;
   color: #0d0d0d;
-  text-transform: capitalize;
   text-align: center;
 
   @media only screen and (max-width: 500px) {
@@ -53,7 +52,7 @@ export const SignInHeading = styled.h2`
   }
 `;
 
-export const SignInSub = styled.p`
+export const SignUpSub = styled.p`
   font-size: 1.8rem;
   color: #1b2021;
   padding: 0.8rem 0 3.2rem;
@@ -88,7 +87,7 @@ export const GoogleButton = styledMUI(Button)`
   }
 `;
 
-export const SignInSpan = styled.span`
+export const SignUpSpan = styled.span`
   font-size: 2rem;
   color: #0d0d0d;
   margin-top: 3.2rem;
@@ -119,10 +118,10 @@ export const SignInSpan = styled.span`
   }
 `;
 
-export const SignInForm = styled.form`
+export const SignUpForm = styled.form`
   margin-top: 4rem;
 
-  & .signin__link {
+  & .signUp__link {
     font-size: 1.6rem;
     color: #1b2021;
     text-align: right;
@@ -134,15 +133,12 @@ export const SignInForm = styled.form`
   }
 `;
 
-export const SignInFormGroup = styled.div`
+export const SignUpFormGroup = styled.div`
   position: relative;
-
-  :first-of-type {
-    margin-bottom: 4rem;
-  }
+  margin-bottom: 4rem;
 `;
 
-export const SignInLabel = styled.label`
+export const SignUpLabel = styled.label`
   padding-bottom: 1.6rem;
   font-weight: 400;
   font-size: 2rem;
@@ -154,7 +150,7 @@ export const SignInLabel = styled.label`
   }
 `;
 
-export const SignInInput = styled.input`
+export const SignUpInput = styled.input`
   padding-bottom: 1rem;
   border: none;
   border-bottom: 2px solid #0d0d0d33;
@@ -196,7 +192,7 @@ export const SignInInput = styled.input`
   }
 `;
 
-export const SignInButton = styledMUI(Button)`
+export const SignUpButton = styledMUI(Button)`
   padding: 1.2rem 3.2rem;
   border-radius: 8px;
   font-weight: 600;
@@ -220,7 +216,7 @@ export const SignInButton = styledMUI(Button)`
   }
 `;
 
-export const SignInText = styled.p`
+export const SignUpText = styled.p`
   font-weight: 400;
   font-size: 2rem;
   color: #1b2021;
