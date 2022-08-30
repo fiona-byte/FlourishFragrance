@@ -1,5 +1,7 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useMutation } from '@tanstack/react-query';
+import { authServices } from '../../services/authServices';
 import Google from '../../assets/svgs/googleIcon';
 import {
   SignUpButton,
@@ -31,7 +33,6 @@ const defaultFormValues = {
 };
 
 const SignUp = () => {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
   const [formValues, setFormValues] = useState<inputValues>(defaultFormValues);
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -39,9 +40,18 @@ const SignUp = () => {
     setFormValues({ ...formValues, [name]: value });
   };
 
+  const mutation = useMutation((formValues: inputValues) => authServices.register(formValues), {
+    onError: (error: unknown) => {
+      console.log(error);
+    },
+    onSuccess: (response) => {
+      console.log(response);
+    },
+  });
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(formValues);
+    mutation.mutate(formValues);
   };
 
   return (
@@ -104,7 +114,7 @@ const SignUp = () => {
               />
               <span className='focus-border'></span>
             </SignUpFormGroup>
-            <SignUpButton type='submit'>{isLoading ? 'Loading' : 'Create account'}</SignUpButton>
+            <SignUpButton type='submit'>{mutation.isLoading ? 'Loading' : 'Create account'}</SignUpButton>
             <SignUpText>
               Already have an account?{' '}
               <Link to='/signin' className='signup__text--link'>
