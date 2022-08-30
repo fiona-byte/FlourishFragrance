@@ -36,6 +36,11 @@ const SignIn = () => {
     },
   });
 
+  const handleGoogleAuth = () => {
+    const res = authServices.authWithGoogle();
+    console.log(res);
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     const payload = { email, password };
@@ -48,7 +53,7 @@ const SignIn = () => {
         <SignInContainer>
           <SignInHeading>Hello again</SignInHeading>
           <SignInSub>Please enter your details to sign in to your account</SignInSub>
-          <GoogleButton>
+          <GoogleButton onClick={handleGoogleAuth}>
             <Google />
             <span style={{ paddingLeft: '1.6rem' }}>Sign in with Google</span>
           </GoogleButton>
