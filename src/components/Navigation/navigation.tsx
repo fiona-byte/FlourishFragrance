@@ -1,11 +1,26 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HashLink as LinkH } from 'react-router-hash-link';
 import Hamburger from '../../assets/svgs/hamburger';
 import './navigation.css';
 
 const Navigation = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const handleStickyNav = () => {
+    if (window.scrollY > 0) {
+      setIsScrolled(true);
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleStickyNav);
+  });
+
   return (
-    <nav className='navigation'>
+    <nav className={isScrolled ? 'navigation navigation__scrolled' : 'navigation'}>
       <button className='navigation__btn'>
         <Hamburger />
       </button>
