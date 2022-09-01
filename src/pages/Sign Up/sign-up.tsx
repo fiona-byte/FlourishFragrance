@@ -49,6 +49,11 @@ const SignUp = () => {
     },
   });
 
+  const handleGoogleAuth = () => {
+    const res = authServices.authWithGoogle();
+    console.log(res);
+  };
+
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     mutation.mutate(formValues);
@@ -60,7 +65,7 @@ const SignUp = () => {
         <SignUpContainer>
           <SignUpHeading>Create an account</SignUpHeading>
           <SignUpSub>Start for free!</SignUpSub>
-          <GoogleButton>
+          <GoogleButton onClick={handleGoogleAuth}>
             <Google />
             <span style={{ paddingLeft: '1.6rem' }}>Sign up with Google</span>
           </GoogleButton>
