@@ -1,5 +1,7 @@
 import Contact from '../pages/Contact/contact';
+import FAQ from '../pages/FAQ/faq';
 import LandingPage from '../pages/LandingPage/landing-page';
+import ProductsPage from '../pages/ProductsPage/products-page';
 import SignIn from '../pages/Sign In/sign-in';
 import SignUp from '../pages/Sign Up/sign-up';
 
@@ -28,6 +30,16 @@ export const routePaths: RouteProps[] = [
   {
     path: '/signin',
     Component: <SignIn />,
+    exact: true,
+  },
+  {
+    path: '/products',
+    Component: <ProductsPage />,
+    exact: true,
+  },
+  {
+    path: '/faq',
+    Component: <FAQ />,
     exact: true,
   },
 ];
