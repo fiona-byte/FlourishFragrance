@@ -196,6 +196,15 @@ export const SignInInput = styled.input`
   }
 `;
 
+export const IconButton = styled.button`
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+  position: absolute;
+  right: 0;
+`;
+
 export const SignInButton = styledMUI(Button)`
   padding: 1.2rem 3.2rem;
   border-radius: 8px;

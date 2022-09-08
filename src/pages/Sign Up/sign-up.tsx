@@ -1,8 +1,9 @@
 import { ChangeEvent, FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@tanstack/react-query';
 import { authServices } from '../../services/authServices';
 import Google from '../../assets/svgs/googleIcon';
+import Eye from '../../assets/svgs/eye';
+import EyeClose from '../../assets/svgs/eyeClose';
 import {
   SignUpButton,
   SignUpContainer,
@@ -13,6 +14,7 @@ import {
   SignUpInput,
   SignUpForm,
   SignUpFormGroup,
+  IconButton,
   SignUpLabel,
   GoogleButton,
   SignUpText,
@@ -34,20 +36,16 @@ const defaultFormValues = {
 
 const SignUp = () => {
   const [formValues, setFormValues] = useState<inputValues>(defaultFormValues);
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
+
+  const handlePasswordVisibilty = () => {
+    setPasswordVisibility(!passwordVisibility);
+  };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const { name, value } = e.target;
     setFormValues({ ...formValues, [name]: value });
   };
-
-  const mutation = useMutation((formValues: inputValues) => authServices.register(formValues), {
-    onError: (error: unknown) => {
-      console.log(error);
-    },
-    onSuccess: (response) => {
-      console.log(response);
-    },
-  });
 
   const handleGoogleAuth = () => {
     const res = authServices.authWithGoogle();
@@ -56,7 +54,7 @@ const SignUp = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    mutation.mutate(formValues);
+    authServices.register(formValues);
   };
 
   return (
@@ -110,7 +108,7 @@ const SignUp = () => {
             <SignUpFormGroup>
               <SignUpLabel htmlFor='password'>Password</SignUpLabel>
               <SignUpInput
-                type='password'
+                type={passwordVisibility ? 'text' : 'password'}
                 id='password'
                 name='password'
                 placeholder='Enter your password'
@@ -118,8 +116,9 @@ const SignUp = () => {
                 onChange={handleChange}
               />
               <span className='focus-border'></span>
+              <IconButton onClick={handlePasswordVisibilty}>{passwordVisibility ? <EyeClose /> : <Eye />}</IconButton>
             </SignUpFormGroup>
-            <SignUpButton type='submit'>{mutation.isLoading ? 'Loading' : 'Create account'}</SignUpButton>
+            <SignUpButton type='submit'>Create account</SignUpButton>
             <SignUpText>
               Already have an account?{' '}
               <Link to='/signin' className='signup__text--link'>

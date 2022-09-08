@@ -1,6 +1,5 @@
 import { FormEvent, useState } from 'react';
 import { Link } from 'react-router-dom';
-import { useMutation } from '@tanstack/react-query';
 import Google from '../../assets/svgs/googleIcon';
 import { authServices } from '../../services/authServices';
 import {
@@ -16,7 +15,10 @@ import {
   SignInLabel,
   GoogleButton,
   SignInText,
+  IconButton,
 } from './signin.styles';
+import Eye from '../../assets/svgs/eye';
+import EyeClose from '../../assets/svgs/eyeClose';
 
 type formValues = {
   email: string;
@@ -24,27 +26,22 @@ type formValues = {
 };
 
 const SignIn = () => {
-  const [email, setEmail] = useState<string>('');
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [passwordVisibility, setPasswordVisibility] = useState(false);
 
-  const mutation = useMutation((payload: formValues) => authServices.login(payload), {
-    onError: (error) => {
-      console.log(error);
-    },
-    onSuccess: (response) => {
-      console.log(response);
-    },
-  });
+  const handlePasswordVisibilty = () => {
+    setPasswordVisibility(!passwordVisibility);
+  };
 
   const handleGoogleAuth = () => {
-    const res = authServices.authWithGoogle();
-    console.log(res);
+    authServices.authWithGoogle();
   };
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    const payload = { email, password };
-    mutation.mutate(payload);
+    const payload: formValues = { email, password };
+    authServices.login(payload);
   };
 
   return (
@@ -73,16 +70,17 @@ const SignIn = () => {
             <SignInFormGroup>
               <SignInLabel htmlFor='password'>Password</SignInLabel>
               <SignInInput
-                type='password'
+                type={passwordVisibility ? 'text' : 'password'}
                 id='password'
                 placeholder='Enter your password'
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
+              <IconButton onClick={handlePasswordVisibilty}>{passwordVisibility ? <EyeClose /> : <Eye />}</IconButton>
               <span className='focus-border'></span>
             </SignInFormGroup>
             <p className='signin__link'>Forgot password?</p>
-            <SignInButton type='submit'>{mutation.isLoading ? 'Loading' : 'Sign in'}</SignInButton>
+            <SignInButton type='submit'>Sign in</SignInButton>
             <SignInText>
               Don't have an account?{' '}
               <Link to='/signup' className='signin__text--link'>

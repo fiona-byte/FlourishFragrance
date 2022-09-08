@@ -32,16 +32,16 @@ const Footer: React.FC = () => {
           <FooterHeading>Quick links</FooterHeading>
           <ul className='footer__list'>
             <FooterList>
-              <FooterLink href=''>Home</FooterLink>
+              <FooterLink to='/'>Home</FooterLink>
             </FooterList>
             <FooterList>
-              <FooterLink href=''>FAQ</FooterLink>
+              <FooterLink to='/faq'>FAQ</FooterLink>
             </FooterList>
             <FooterList>
-              <FooterLink href=''>Privacy</FooterLink>
+              <FooterLink to=''>Privacy</FooterLink>
             </FooterList>
             <FooterList>
-              <FooterLink href=''>Contact</FooterLink>
+              <FooterLink to='/contact'>Contact</FooterLink>
             </FooterList>
           </ul>
         </FooterBox>
@@ -55,17 +55,17 @@ const Footer: React.FC = () => {
               <FooterText>flourishfragrance@gmail.com</FooterText>
             </FooterList>
             <FooterList>
-              <FooterLink href='tel:+1 234 567 890'>+1 234 567 890</FooterLink>
+              <FooterLink to='tel:+1 234 567 890'>+1 234 567 890</FooterLink>
             </FooterList>
             <FooterList>
               <FooterSocialBox>
-                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                <FooterLink to='' style={{ paddingRight: '1.6rem' }}>
                   <FooterSocialIcon src={instagram} alt='social-icon' />
                 </FooterLink>
-                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                <FooterLink to='' style={{ paddingRight: '1.6rem' }}>
                   <FooterSocialIcon src={whatsapp} alt='social-icon' />
                 </FooterLink>
-                <FooterLink href='' style={{ paddingRight: '1.6rem' }}>
+                <FooterLink to='' style={{ paddingRight: '1.6rem' }}>
                   <FooterSocialIcon src={telegram} alt='social-icon' />
                 </FooterLink>
               </FooterSocialBox>
