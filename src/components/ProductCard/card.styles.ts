@@ -45,7 +45,7 @@ export const ProductsBox = styled.div`
 export const ProductName = styled.h3`
   font-family: 'Playfair Display';
   font-weight: 600;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: #0d0d0d;
   padding-bottom: 1.2rem;
 
@@ -56,11 +56,11 @@ export const ProductName = styled.h3`
 
 export const ProductPrice = styled.p`
   font-weight: 400;
-  font-size: 2.2rem;
+  font-size: 2rem;
   color: #1b2021;
 
   @media only screen and (max-width: 500px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 

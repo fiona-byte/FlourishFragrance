@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 import { styled as styledMUI } from '@mui/material/styles';
 import { Container, Box, Button } from '@mui/material';
 
@@ -80,7 +81,7 @@ export const FooterList = styled.li`
   }
 `;
 
-export const FooterLink = styled.a`
+export const FooterLink = styled(Link)`
   font-weight: 300;
   font-size: 2rem;
   color: #f4f4f4;
