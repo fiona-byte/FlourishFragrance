@@ -34,6 +34,16 @@
   margin: 1.6rem 0 3rem;
 }
 
+@media all and (min-width: 1500px) {
+  .header {
+    padding: 8rem 17rem;
+  }
+
+  .header__hero {
+    padding: 3rem 0 0;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .header__hero {
     padding: 8rem 5rem 0;

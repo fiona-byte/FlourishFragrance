@@ -14,6 +14,10 @@ export const Wrapper = styled.div`
   background-size: cover;
   overflow: hidden;
 
+  @media only screen and (min-width: 1500px) {
+    margin: 5.6rem 17rem;
+  }
+
   @media only screen and (max-width: 900px) {
     margin: 5.6rem 5rem;
   }

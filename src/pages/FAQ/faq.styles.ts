@@ -3,6 +3,10 @@ import styled from 'styled-components';
 export const FAQWrapper = styled.div`
   padding: 4.8rem 8rem;
 
+  @media only screen and (min-width: 1500px) {
+    margin: 4.8rem 17rem;
+  }
+
   @media only screen and (max-width: 768px) {
     padding: 4.8rem 5rem;
   }
