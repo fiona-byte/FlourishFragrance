@@ -63,9 +63,9 @@ const Navigation = () => {
             </a>
           </li>
           <li className='navigation__list'>
-            <a href='/signin' className='navigation__link'>
+            <Link to='/signin' className='navigation__link'>
               Sign in
-            </a>
+            </Link>
           </li>
         </ul>
       </div>
