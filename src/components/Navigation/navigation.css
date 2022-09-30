@@ -34,8 +34,8 @@
   display: flex;
 }
 
-.navigation__list {
-  padding: 0 2rem;
+.navigation__list:not(:first-child) {
+  padding-left: 4rem;
 }
 
 .navigation__link {
@@ -47,6 +47,12 @@
 
 .navigation__logo {
   width: 85%;
+}
+
+@media all and (min-width: 1500px) {
+  .navigation {
+    padding: 1.5rem 17rem;
+  }
 }
 
 @media only screen and (max-width: 768px) {

@@ -7,6 +7,10 @@ export const FooterContainer = styled.footer`
   background-color: #1b2021;
   padding: 8rem 7rem 4rem;
 
+  @media all and (min-width: 1500px) {
+    padding: 8rem 10rem 4rem;
+  }
+
   @media only screen and (max-width: 900px) {
     padding: 8rem 5rem 4rem;
   }

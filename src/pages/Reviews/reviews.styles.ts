@@ -4,7 +4,6 @@ import { Box } from '@mui/material';
 
 export const ReviewsContainer = styled.section`
   background: #e4e3e3;
-  padding: 8rem;
 
   @media only screen and (max-width: 768px) {
     padding: 6rem 5rem;
