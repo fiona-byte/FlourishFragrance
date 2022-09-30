@@ -1,6 +1,4 @@
-type IconProps = {
-  className?: string;
-};
+import { IconProps } from '../../interfaces/iconInterface';
 
 const Google = ({ className }: IconProps) => {
   return (
