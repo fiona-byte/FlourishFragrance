@@ -61,7 +61,6 @@ export const EmptyCartButton = styledMUI(Button)`
   border-radius: 8px;
   font-weight: 600;
   font-size: 2rem;
-  color: #F4F4F4;
   background-color: #0D0D0D;
   display: flex;
   align-item: center;
@@ -69,6 +68,10 @@ export const EmptyCartButton = styledMUI(Button)`
   text-transform: unset;
   width: 20%;
   margin: 0 auto;
+
+  a {
+      color: #F4F4F4;
+  }
 
   &:hover {
     background-color: #0d0d0d;
