@@ -1,6 +1,4 @@
-interface IconProps {
-  className?: string;
-}
+import { IconProps } from '../../interfaces/iconInterface';
 
 const EmptyCartSvg = ({ className }: IconProps) => {
   return (

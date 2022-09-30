@@ -1,6 +1,4 @@
-type IconProps = {
-  className?: string;
-};
+import { IconProps } from '../../interfaces/iconInterface';
 
 const ChevronLeft = ({ className }: IconProps) => {
   return (
