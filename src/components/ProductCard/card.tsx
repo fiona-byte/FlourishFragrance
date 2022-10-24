@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import heart from '../../assets/svgs/heart.svg';
+import Heart from '../../assets/svgs/heart';
 import {
   Favourite,
   ProductButton,
@@ -20,7 +20,7 @@ const ProductCard = ({ productImage, productName, productPrice }: ProductDetails
   return (
     <ProductsCard>
       <Favourite>
-        <img src={heart} alt='favourite' />
+        <Heart />
       </Favourite>
       <ProductImageContainer>
         <img
@@ -30,7 +30,7 @@ const ProductCard = ({ productImage, productName, productPrice }: ProductDetails
           style={{ width: '100%', height: '100%', borderRadius: '8px 8px 0px 0px' }}
         />
       </ProductImageContainer>
-      <Link to='/'>
+      <Link to='/product-details'>
         <ProductsBox>
           <ProductName>{productName}</ProductName>
           <ProductPrice>{productPrice}</ProductPrice>
