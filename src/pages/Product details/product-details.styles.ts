@@ -182,6 +182,7 @@ export const OutlinedBtn = styledMUI(Button)`
   color: #0D0D0D;
   text-transform: unset;
   width: 100%;
+  margin-bottom: 2.4rem;
 
   :hover {
     background-color: transparent;
@@ -189,6 +190,7 @@ export const OutlinedBtn = styledMUI(Button)`
 
   @media only screen and (min-width: 768px) {
     margin-right: 2rem;
+      margin-bottom: 0;
   }
 
    @media only screen and (min-width: 1200px) {
