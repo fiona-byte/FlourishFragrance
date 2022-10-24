@@ -7,7 +7,7 @@ import './navigation.css';
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  const handleStickyNav = () => {
+  const handleStickyNav = (): void => {
     if (window.scrollY > 0) {
       setIsScrolled(true);
     } else {
@@ -53,14 +53,14 @@ const Navigation = () => {
         </div>
         <ul className='navigation__item'>
           <li className='navigation__list'>
-            <a href='/' className='navigation__link'>
+            <Link to='/' className='navigation__link'>
               Wishlist
-            </a>
+            </Link>
           </li>
           <li className='navigation__list'>
-            <a href='/' className='navigation__link'>
+            <Link to='/' className='navigation__link'>
               Cart(0)
-            </a>
+            </Link>
           </li>
           <li className='navigation__list'>
             <Link to='/signin' className='navigation__link'>
