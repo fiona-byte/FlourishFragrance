@@ -18,6 +18,7 @@ import {
 } from './product-details.styles';
 import productImg from '../../assets/imgs/product img.png';
 import Heart from '../../assets/svgs/heart';
+import IncrementSwitch from '../../components/IncrementSwitch/increment-switch';
 
 const ProductDetails = () => {
   const [value, setValue] = useState<number | null>(2);
@@ -55,6 +56,7 @@ const ProductDetails = () => {
           </ProductDescription>
           <ProductDetailsGroup>
             <ProductPrice>₦30,000</ProductPrice>
+            <IncrementSwitch />
           </ProductDetailsGroup>
           <ProductDetailsBtnContainer>
             <OutlinedBtn>Add to Cart</OutlinedBtn>
