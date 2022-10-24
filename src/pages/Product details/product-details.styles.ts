@@ -90,7 +90,7 @@ export const ProductDetailsImage = styled.img`
     }
   }
 
-  @media only screen and (min-width: 900px) {
+  @media only screen and (min-width: 1024px) {
     width: 12.6rem;
     height: 11rem;
   }
