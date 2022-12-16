@@ -79,7 +79,9 @@ const SignIn = () => {
               <IconButton onClick={handlePasswordVisibilty}>{passwordVisibility ? <EyeClose /> : <Eye />}</IconButton>
               <span className='focus-border'></span>
             </SignInFormGroup>
-            <p className='signin__link'>Forgot password?</p>
+            <Link to='/forgot-password' className='signin__link'>
+              Forgot password?
+            </Link>
             <SignInButton type='submit'>Sign in</SignInButton>
             <SignInText>
               Don't have an account?{' '}
