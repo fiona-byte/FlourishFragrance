@@ -134,7 +134,7 @@ export const ProductButton = styledMUI(Button)`
     background-color: #d9b80c;
   }
 
-  @media only screen and (max-width: 1024px) {
+  @media only screen and (min-width: 1024px) {
     padding: 1.2rem 2rem;
     font-size: 2rem;
   }
