@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { styled as styledMUI } from '@mui/material/styles';
 import { Button } from '@mui/material';
 
-export const ProductsCard = styled.div`
+export const ProductWrapper = styled.div`
   width: 100%;
   margin-bottom: 4rem;
   background: #e4e3e3;
@@ -11,8 +11,8 @@ export const ProductsCard = styled.div`
   position: relative;
 
   @media only screen and (min-width: 1024px) {
-    width: 36.6rem;
-    margin-bottom: 6rem;
+    width: 28rem;
+    margin-bottom: 5rem;
   }
 `;
 
@@ -32,29 +32,42 @@ export const Favourite = styled.button`
   outline: none;
   border: none;
 
-  // @media only screen and (min-width: 500px) {
-  //   width: 4rem;
-  //   height: 4rem;
-  //   top: 16px;
-  //   right: 16px;
-  // }
+  @media only screen and (min-width: 900px) {
+    width: 3.2rem;
+    height: 3.2rem;
+    top: 16px;
+    right: 16px;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 4rem;
+    height: 4rem;
+  }
 
   svg {
     width: 1.6rem;
     height: 1.6rem;
+
+    @media only screen and (min-width: 1024px) {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
   }
 `;
 
 export const ProductImageContainer = styled.div`
   width: 100%;
-  height: 12rem;
+  height: 14rem;
 
   @media only screen and (min-width: 600px) {
-    width: 25rem;
-    // height: 22.5rem;
+    height: 18rem;
   }
 
-  @media only screen and (max-width: 300px) {
+  @media only screen and (min-width: 1024px) {
+    height: 20rem;
+  }
+
+  @media only screen and (max-width: 320px) {
     height: 17rem;
   }
 
@@ -63,12 +76,24 @@ export const ProductImageContainer = styled.div`
   }
 `;
 
-export const ProductsBox = styled.div`
-  padding: 1rem 0.8rem 2rem;
+export const ProductDetailsWrapper = styled.div`
+  padding: 1rem 0.8rem 0;
 
-  // @media only screen and (min-width: 500px) {
-  //   padding: 2.4rem 2rem 3.2rem;
-  // }
+  @media only screen and (min-width: 600px) {
+    padding: 2rem 1.4rem 0;
+  }
+
+  @media only screen and (min-width: 1200px) {
+    padding: 2.4rem 2rem 0;
+  }
+`;
+
+export const ProductBox = styled.div`
+  padding-bottom: 2rem;
+
+  @media only screen and (min-width: 600px) {
+    padding-bottom: 3.2rem;
+  }
 `;
 
 export const ProductName = styled.h3`
@@ -78,19 +103,19 @@ export const ProductName = styled.h3`
   font-size: 1.8rem;
   padding-bottom: 0.5rem;
 
-  // @media only screen and (min-width: 500px) {
-  //   font-size: 2.2rem;
-  //   padding-bottom: 1.2rem;
-  // }
+  @media only screen and (min-width: 600px) {
+    font-size: 2rem;
+    padding-bottom: 1rem;
+  }
 `;
 
 export const ProductPrice = styled.p`
   font-size: 1.8rem;
   color: #1b2021;
 
-  // @media only screen and (min-width: 500px) {
-  //   font-size: 2rem;
-  // }
+  @media only screen and (min-width: 600px) {
+    font-size: 2rem;
+  }
 `;
 
 export const ProductButton = styledMUI(Button)`
@@ -102,15 +127,15 @@ export const ProductButton = styledMUI(Button)`
   font-size: 1.6rem;
   color: #1b2021;
   text-transform: unset;
-  width: 95%;
-  margin-left: 2.5%;
-  margin-bottom: 1rem;
+  width: 100%;
+  margin-bottom: 1.6rem;
 
   :hover {
     background-color: #d9b80c;
   }
 
-  // @media only screen and (max-width: 500px) {
-  //       padding: 1.2rem 2rem;
-  // }
+  @media only screen and (max-width: 1024px) {
+    padding: 1.2rem 2rem;
+    font-size: 2rem;
+  }
 `;
