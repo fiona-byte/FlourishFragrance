@@ -136,8 +136,8 @@ export const ReviewsIconButton = styled.button`
 export const ReviewsText = styled.p`
   font-style: italic;
   font-weight: 600;
-  font-size: 2.7rem;
-  line-height: 145%;
+  font-size: 2.2rem;
+  line-height: 150%;
   color: #f4f4f4;
   padding-top: 4rem;
 

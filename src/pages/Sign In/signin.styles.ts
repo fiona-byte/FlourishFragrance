@@ -127,6 +127,7 @@ export const SignInForm = styled.form`
   margin-top: 4rem;
 
   & .signin__link {
+    display: block;
     font-size: 1.6rem;
     color: #1b2021;
     text-align: right;
