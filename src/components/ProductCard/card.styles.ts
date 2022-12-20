@@ -40,8 +40,8 @@ export const Favourite = styled.button`
   }
 
   @media only screen and (min-width: 1024px) {
-    width: 4rem;
-    height: 4rem;
+    width: 3.6rem;
+    height: 3.6rem;
   }
 
   svg {
@@ -49,8 +49,8 @@ export const Favourite = styled.button`
     height: 1.6rem;
 
     @media only screen and (min-width: 1024px) {
-      width: 2.4rem;
-      height: 2.4rem;
+      width: 2rem;
+      height: 2rem;
     }
   }
 `;
@@ -82,14 +82,10 @@ export const ProductDetailsWrapper = styled.div`
   @media only screen and (min-width: 600px) {
     padding: 2rem 1.4rem 0;
   }
-
-  @media only screen and (min-width: 1200px) {
-    padding: 2.4rem 2rem 0;
-  }
 `;
 
 export const ProductBox = styled.div`
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
 
   @media only screen and (min-width: 600px) {
     padding-bottom: 3.2rem;
@@ -100,21 +96,20 @@ export const ProductName = styled.h3`
   font-family: 'Playfair Display';
   font-weight: 600;
   color: #0d0d0d;
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   padding-bottom: 0.5rem;
 
   @media only screen and (min-width: 600px) {
-    font-size: 2rem;
-    padding-bottom: 1rem;
+    font-size: 1.8rem;
   }
 `;
 
 export const ProductPrice = styled.p`
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   color: #1b2021;
 
   @media only screen and (min-width: 600px) {
-    font-size: 2rem;
+    font-size: 1.8rem;
   }
 `;
 
@@ -134,8 +129,8 @@ export const ProductButton = styledMUI(Button)`
     background-color: #d9b80c;
   }
 
-  @media only screen and (min-width: 1024px) {
-    padding: 1.1rem 2rem;
-    font-size: 1.8rem;
-  }
+  // @media only screen and (min-width: 1024px) {
+  //   padding: 1.1rem 2rem;
+  //   font-size: 1.8rem;
+  // }
 `;

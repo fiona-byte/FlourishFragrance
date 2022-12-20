@@ -121,7 +121,7 @@ export const CartContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 2.4rem 0 3.2rem;
+  padding: 2.4rem 0 3.2rem;
 `;
 
 export const CartContainerText = styled.p`
@@ -138,25 +138,25 @@ export const CartContainerTotal = styled.h2`
 `;
 
 export const CartButtonContainer = styled.div`
+  margin: 3.2rem auto;
+  display: flex;
+  flex-direction: column;
+
   @media only screen and (min-width: 768px) {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
   }
 `;
 
-export const CartButton = styledMUI(Button)`
-  padding: 1.2rem 3.2rem;
+export const CartFilledButton = styledMUI(Button)`
+  padding: 1rem 2.4rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: #F4F4F4;
   background-color: #0D0D0D;
-  margin: 2.4rem auto;
   text-transform: capitalize;
-  display: flex;
-  align-item: center;
-  justify-content: center;
   width: 100%;
 
   :hover {
@@ -165,12 +165,46 @@ export const CartButton = styledMUI(Button)`
 
   @media only screen and (min-width: 600px) {
     width: 45%;
+    margin: 0 auto;
+  }
+
+  @media only screen and (min-width: 768px) {
+    width: 28%;
+    margin: unset;
+    margin-left: 2.4rem;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 20%;
+  }
+`;
+
+export const CartOutlinedButton = styled(Link)`
+  padding: 1rem 2.4rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.8rem;
+  border: 2px solid #0d0d0d;
+  color: #0d0d0d;
+  background-color: transparent;
+  text-transform: capitalize;
+  width: 100%;
+  margin-right: 2.4rem;
+  text-align: center;
+
+  @media only screen and (min-width: 768px) {
+    width: 28%;
+  }
+
+  @media only screen and (min-width: 1024px) {
+    width: 20%;
   }
 `;
 
 export const CartLink = styled(Link)`
-  display: block;
   font-size: 1.8rem;
   text-align: center;
   color: #1b2021;
+  order: 1;
+  margin-top: 1.6rem;
 `;
