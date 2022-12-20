@@ -1,3 +1,4 @@
+import Cart from '../pages/Cart/cart';
 import Contact from '../pages/Contact/contact';
 import FAQ from '../pages/FAQ/faq';
 import ForgotPassword from '../pages/ForgotPassword/forgot-password';
@@ -40,6 +41,10 @@ export const routePaths: RouteProps[] = [
   {
     path: '/product-details',
     Component: <ProductDetails />,
+  },
+  {
+    path: '/cart',
+    Component: <Cart />,
   },
   {
     path: '/faq',

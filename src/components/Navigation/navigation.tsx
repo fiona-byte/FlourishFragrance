@@ -58,7 +58,7 @@ const Navigation = () => {
             </Link>
           </li>
           <li className='navigation__list'>
-            <Link to='/' className='navigation__link'>
+            <Link to='/cart' className='navigation__link'>
               Cart(0)
             </Link>
           </li>
