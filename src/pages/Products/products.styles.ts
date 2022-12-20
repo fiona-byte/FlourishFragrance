@@ -22,11 +22,26 @@ export const ProductsLink = styled(Link)`
 
 export const ProductsContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(4, 1fr);
   place-items: center;
-  padding-top: 7rem;
+  grid-column-gap: 4rem;
+  padding-top: 4rem;
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @media only screen and (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 
   @media only screen and (max-width: 500px) {
-    padding-top: 4rem;
+    padding-top: 2.4rem;
+    grid-column-gap: 2rem;
+  }
+
+  @media only screen and (max-width: 320px) {
+    grid-template-columns: 1fr;
+    grid-gap: 0;
   }
 `;

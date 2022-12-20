@@ -12,15 +12,18 @@ import {
   CartContainerText,
   CartContainerTotal,
   ProductCount,
-  CartButton,
   CartLink,
   CartButtonContainer,
+  CartOutlinedButton,
+  CartFilledButton,
 } from './cart.styles';
 import productImg from '../../assets/imgs/product img.png';
 import IncrementSwitch from '../../components/IncrementSwitch/increment-switch';
 import Trash from '../../assets/svgs/trash';
+import { useMobile } from '../../hooks/useMobile';
 
 const Cart = () => {
+  const isMobile = useMobile();
   return (
     <CartWrapper>
       <CartHeading>Cart</CartHeading>
@@ -50,8 +53,12 @@ const Cart = () => {
         <CartContainerTotal>₦10,000</CartContainerTotal>
       </CartContainer>
       <CartButtonContainer>
-        <CartButton>Checkout</CartButton>
-        <CartLink to='/products'>Continue Shopping</CartLink>
+        {isMobile ? (
+          <CartLink to='/products'>Continue Shopping</CartLink>
+        ) : (
+          <CartOutlinedButton to='/products'>Continue shopping</CartOutlinedButton>
+        )}
+        <CartFilledButton>Checkout</CartFilledButton>
       </CartButtonContainer>
     </CartWrapper>
   );
