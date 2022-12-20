@@ -5,7 +5,7 @@ import { Container, Box, Button } from '@mui/material';
 
 export const FooterContainer = styled.footer`
   background-color: #1b2021;
-  padding: 8rem 7rem 4rem;
+  padding: 7.2rem 7rem 4rem;
 
   @media all and (min-width: 1500px) {
     padding: 8rem 10rem 4rem;
@@ -31,7 +31,7 @@ export const FooterLogoContainer = styled.a`
 `;
 
 export const FooterLogo = styled.img`
-  width: 25%;
+  width: 20%;
 
   @media only screen and (max-width: 768px) {
     width: 30%;
@@ -50,7 +50,7 @@ export const FooterWrapper = styledMUI(Container)`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  margin-top: 6.4rem;
+  margin-top: 5.6rem;
 
   @media only screen and (max-width: 900px) {
     flex-direction: column;
@@ -69,7 +69,7 @@ export const FooterBox = styledMUI(Box)`
 export const FooterHeading = styled.h4`
   font-family: 'Playfair Display';
   font-weight: 600;
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   color: #ffffff;
   padding-bottom: 3rem;
 
@@ -154,7 +154,7 @@ export const CTAButton = styledMUI(Button)`
 
 export const FooterCopy = styled.p`
   font-weight: 200;
-  font-size: 2rem;
+  font-size: 1.6rem;
   color: #f4f4f4;
   text-align: center;
   margin-top: 6.4rem;
@@ -164,6 +164,6 @@ export const FooterCopy = styled.p`
   }
 
   @media only screen and (max-width: 375px) {
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
 `;

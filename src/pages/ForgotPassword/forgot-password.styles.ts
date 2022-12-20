@@ -7,11 +7,10 @@ export const Wrapper = styled.div`
   margin: 5.6rem 8rem;
   padding: 0;
   background: linear-gradient(rgba(13, 13, 13, 0.2), rgba(13, 13, 13, 0.2)),
-    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1661636105/FlourishFragrance/sign-in_qfapgg.jpg');
-  background-position-x: right;
-  background-position-y: center;
+    url('https://res.cloudinary.com/dw4rdnuqh/image/upload/v1671178436/FlourishFragrance/forgot-password_h7umfd.jpg');
+  background-position-y: 50%;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 50%;
   overflow: hidden;
 
   @media only screen and (min-width: 1500px) {
@@ -32,7 +31,7 @@ export const Wrapper = styled.div`
   }
 `;
 
-export const SignInContainer = styled.div`
+export const ForgotPasswordContainer = styled.div`
   background: #e4e3e3;
   padding: 4rem;
   width: 50%;
@@ -44,7 +43,7 @@ export const SignInContainer = styled.div`
   }
 `;
 
-export const SignInHeading = styled.h2`
+export const ForgotPasswordHeading = styled.h2`
   font-family: 'Playfair Display';
   font-weight: 600;
   font-size: 2.7rem;
@@ -57,7 +56,7 @@ export const SignInHeading = styled.h2`
   }
 `;
 
-export const SignInSub = styled.p`
+export const ForgotPasswordSub = styled.p`
   font-size: 1.8rem;
   color: #1b2021;
   padding: 0.8rem 0 3.2rem;
@@ -68,65 +67,10 @@ export const SignInSub = styled.p`
   }
 `;
 
-export const GoogleButton = styledMUI(Button)`
-    padding: 1.2rem 3.2rem;
-    border: 2px solid #0D0D0D;
-    border-radius: 8px;
-    font-weight: 600;
-    font-family: 'Source Sans Pro';
-    font-size: 2rem;
-    color: #0d0d0d;
-    text-transform: unset;
-    display: flex;
-    align-item: center;
-    justify-content: center;
-    margin: 1.6rem auto 2.4rem;
+export const ForgotPasswordForm = styled.form`
+  margin-top: 2rem;
 
-  @media only screen and (max-width: 500px) {
-    width: 70%;
-    margin: 1.6rem auto 3.2rem;
-  }
-
-  @media only screen and (max-width: 375px) {
-    width: 100%;
-  }
-`;
-
-export const SignInSpan = styled.span`
-  font-size: 2rem;
-  color: #0d0d0d;
-  margin-top: 3.2rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-
-  @media only screen and (max-width: 500px) {
-    font-size: 1.6rem;
-  }
-
-  ::before,
-  ::after {
-    content: '';
-    display: block;
-    opacity: 0.3;
-    height: 1px;
-    background-color: #0d0d0d;
-    width: 100%;
-  }
-
-  ::before {
-    margin-right: 1.6rem;
-  }
-
-  ::after {
-    margin-left: 1.6rem;
-  }
-`;
-
-export const SignInForm = styled.form`
-  margin-top: 4rem;
-
-  & .signin__link {
+  & .forgot-password__link {
     display: block;
     font-size: 1.6rem;
     color: #1b2021;
@@ -139,7 +83,7 @@ export const SignInForm = styled.form`
   }
 `;
 
-export const SignInFormGroup = styled.div`
+export const ForgotPasswordFormGroup = styled.div`
   position: relative;
 
   :first-of-type {
@@ -147,7 +91,7 @@ export const SignInFormGroup = styled.div`
   }
 `;
 
-export const SignInLabel = styled.label`
+export const ForgotPasswordLabel = styled.label`
   padding-bottom: 1.6rem;
   font-weight: 400;
   font-size: 2rem;
@@ -159,7 +103,7 @@ export const SignInLabel = styled.label`
   }
 `;
 
-export const SignInInput = styled.input`
+export const ForgotPasswordInput = styled.input`
   padding-bottom: 1rem;
   border: none;
   border-bottom: 2px solid #0d0d0d33;
@@ -201,35 +145,31 @@ export const SignInInput = styled.input`
   }
 `;
 
-export const IconButton = styled.button`
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  position: absolute;
-  right: 0;
-`;
-
-export const SignInButton = styledMUI(Button)`
+export const ForgotPasswordButton = styledMUI(Button)`
   padding: 1.2rem 3.2rem;
   border-radius: 8px;
   font-weight: 600;
   font-size: 2rem;
   color: #F4F4F4;
   background-color: #0D0D0D;
-  margin: 4rem auto 2.4rem;
+  margin: 0 auto 2.4rem;
   text-transform: capitalize;
   display: flex;
   align-item: center;
   justify-content: center;
   width: 100%;
+  margin-top: 4rem;
 
   :hover {
     background-color: #0D0D0D;
   }
+
+  @media only screen and (max-width: 500px) {
+    width: 100%;
+  }
 `;
 
-export const SignInText = styled.p`
+export const ForgotPasswordText = styled.p`
   font-weight: 400;
   font-size: 2rem;
   color: #1b2021;

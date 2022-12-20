@@ -6,8 +6,9 @@ import {
   ProductImageContainer,
   ProductName,
   ProductPrice,
-  ProductsBox,
-  ProductsCard,
+  ProductBox,
+  ProductWrapper,
+  ProductDetailsWrapper,
 } from './card.styles';
 
 type ProductDetails = {
@@ -18,7 +19,7 @@ type ProductDetails = {
 
 const ProductCard = ({ productImage, productName, productPrice }: ProductDetails) => {
   return (
-    <ProductsCard>
+    <ProductWrapper>
       <Favourite>
         <Heart />
       </Favourite>
@@ -30,14 +31,16 @@ const ProductCard = ({ productImage, productName, productPrice }: ProductDetails
           style={{ width: '100%', height: '100%', borderRadius: '8px 8px 0px 0px' }}
         />
       </ProductImageContainer>
-      <Link to='/product-details'>
-        <ProductsBox>
-          <ProductName>{productName}</ProductName>
-          <ProductPrice>{productPrice}</ProductPrice>
-        </ProductsBox>
-      </Link>
-      <ProductButton>Add to cart</ProductButton>
-    </ProductsCard>
+      <ProductDetailsWrapper>
+        <Link to='/product-details'>
+          <ProductBox>
+            <ProductName>{productName}</ProductName>
+            <ProductPrice>{productPrice}</ProductPrice>
+          </ProductBox>
+        </Link>
+        <ProductButton>Add to cart</ProductButton>
+      </ProductDetailsWrapper>
+    </ProductWrapper>
   );
 };
 
