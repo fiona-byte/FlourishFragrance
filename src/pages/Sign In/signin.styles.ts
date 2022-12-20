@@ -217,20 +217,15 @@ export const SignInButton = styledMUI(Button)`
   font-size: 2rem;
   color: #F4F4F4;
   background-color: #0D0D0D;
-  margin: 0 auto 2.4rem;
+  margin: 4rem auto 2.4rem;
   text-transform: capitalize;
   display: flex;
   align-item: center;
   justify-content: center;
   width: 100%;
-  margin-top: 4rem;
 
   :hover {
     background-color: #0D0D0D;
-  }
-
-  @media only screen and (max-width: 500px) {
-    width: 100%;
   }
 `;
 

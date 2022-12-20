@@ -135,7 +135,7 @@ export const ProductButton = styledMUI(Button)`
   }
 
   @media only screen and (min-width: 1024px) {
-    padding: 1.2rem 2rem;
-    font-size: 2rem;
+    padding: 1.1rem 2rem;
+    font-size: 1.8rem;
   }
 `;
