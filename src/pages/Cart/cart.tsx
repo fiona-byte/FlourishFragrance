@@ -16,11 +16,13 @@ import {
   CartButtonContainer,
   CartOutlinedButton,
   CartFilledButton,
+  ProductPrice,
+  CartControl,
 } from './cart.styles';
+import { useMobile } from '../../hooks/useMobile';
 import productImg from '../../assets/imgs/product img.png';
 import IncrementSwitch from '../../components/IncrementSwitch/increment-switch';
 import Trash from '../../assets/svgs/trash';
-import { useMobile } from '../../hooks/useMobile';
 
 const Cart = () => {
   const isMobile = useMobile();
@@ -29,23 +31,35 @@ const Cart = () => {
       <CartHeading>Cart</CartHeading>
       <div>
         <CartBox>
-          <CartCard>
-            <div style={{ position: 'relative' }}>
-              <CartImage src={productImg} alt='product' />
-              <ProductCount>1</ProductCount>
-            </div>
-            <CartProductInfo>
-              <div>
-                <CartProductName>Victora Secret Bombshell</CartProductName>
-                <CartPrice>₦10,000</CartPrice>
+          <CartControl>
+            <CartCard>
+              <div style={{ position: 'relative' }}>
+                <CartImage src={productImg} alt='product' />
+                <ProductCount>1</ProductCount>
               </div>
-              <IncrementSwitch />
-            </CartProductInfo>
-          </CartCard>
-          <CartRemoveButton>
-            <Trash />
-            <span>Remove</span>
-          </CartRemoveButton>
+              <CartProductInfo>
+                <div>
+                  <CartProductName>Victora Secret Bombshell</CartProductName>
+                  <CartPrice>₦10,000</CartPrice>
+                </div>
+                <IncrementSwitch />
+              </CartProductInfo>
+            </CartCard>
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                paddingTop: '2.4rem',
+              }}
+            >
+              {!isMobile && <ProductPrice>₦10,000</ProductPrice>}
+              <CartRemoveButton>
+                <Trash />
+                <span>Remove</span>
+              </CartRemoveButton>
+            </div>
+          </CartControl>
         </CartBox>
       </div>
       <CartContainer>

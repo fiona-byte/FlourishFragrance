@@ -19,6 +19,10 @@ export const CartHeading = styled.h2`
 `;
 
 export const CartBox = styled.div`
+  @media only screen and (min-width: 900px) {
+    padding: 0 3.2rem;
+  }
+
   &:after {
     content: '';
     display: block;
@@ -29,9 +33,20 @@ export const CartBox = styled.div`
   }
 `;
 
+export const CartControl = styled.div`
+  @media only screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+  }
+`;
+
 export const CartCard = styled.div`
   display: flex;
-  padding: 2.4rem 0;
+  padding-top: 2.4rem;
+
+  @media only screen and (min-width: 1024px) {
+    padding-top: 3.2rem;
+  }
 `;
 
 export const CartImage = styled.img`
@@ -56,6 +71,7 @@ export const ProductCount = styled.p`
   justify-content: center;
   align-items: center;
   font-size: 1.4rem;
+  font-weight: 600;
   color: #1b2021;
   position: absolute;
   top: -7px;
@@ -68,6 +84,10 @@ export const CartProductInfo = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+
+  @media only screen and (max-width: 320px) {
+    margin-left: 2rem;
+  }
 `;
 
 export const CartProductName = styled.h2`
@@ -78,6 +98,10 @@ export const CartProductName = styled.h2`
 
   @media only screen and (min-width: 768px) {
     font-size: 2.2rem;
+
+    @media only screen and (max-width: 320px) {
+      font-size: 1.6rem;
+    }
   }
 `;
 
@@ -89,6 +113,18 @@ export const CartPrice = styled.p`
 
   @media only screen and (min-width: 768px) {
     font-size: 2rem;
+  }
+
+  @media only screen and (max-width: 320px) {
+    font-size: 1.6rem;
+  }
+`;
+
+export const ProductPrice = styled.p`
+  @media only screen and (min-width: 768px) {
+    font-weight: 600;
+    font-size: 2.6rem;
+    color: #0d0d0d;
   }
 `;
 
@@ -114,6 +150,14 @@ export const CartRemoveButton = styled.button`
     @media only screen and (min-width: 768px) {
       font-size: 1.8rem;
     }
+
+    @media only screen and (max-width: 320px) {
+      font-size: 1.4rem;
+    }
+  }
+
+  @media only screen and (max-width: 320px) {
+    padding-right: 0;
   }
 `;
 
@@ -122,6 +166,10 @@ export const CartContainer = styled.div`
   justify-content: space-between;
   align-items: center;
   padding: 2.4rem 0 3.2rem;
+
+  @media only screen and (min-width: 768px) {
+    justify-content: flex-end;
+  }
 `;
 
 export const CartContainerText = styled.p`
@@ -135,6 +183,10 @@ export const CartContainerTotal = styled.h2`
   font-weight: 600;
   font-size: 2.4rem;
   color: #0d0d0d;
+
+  @media only screen and (min-width: 768px) {
+    padding-left: 3.2rem;
+  }
 `;
 
 export const CartButtonContainer = styled.div`
@@ -146,6 +198,7 @@ export const CartButtonContainer = styled.div`
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    margin-top: '4rem';
   }
 `;
 
