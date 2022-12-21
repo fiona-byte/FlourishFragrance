@@ -12,11 +12,11 @@ export const FooterContainer = styled.footer`
   }
 
   @media only screen and (max-width: 900px) {
-    padding: 8rem 5rem 4rem;
+    padding: 5rem 5rem 3rem;
   }
 
   @media only screen and (max-width: 500px) {
-    padding: 8rem 2rem 4rem;
+    padding: 5rem 2rem 3rem;
   }
 `;
 
@@ -25,7 +25,7 @@ export const FooterLogoContainer = styled.a`
   text-align: center;
   padding-bottom: 3.2rem;
 
-  @media only screen and (max-width: 500px) {
+  @media only screen and (max-width: 600px) {
     padding-bottom: 0rem;
   }
 `;
@@ -38,11 +38,7 @@ export const FooterLogo = styled.img`
   }
 
   @media only screen and (max-width: 500px) {
-    width: 35%;
-  }
-
-  @media only screen and (max-width: 375px) {
-    width: 47%;
+    width: 32%;
   }
 `;
 
@@ -54,7 +50,7 @@ export const FooterWrapper = styledMUI(Container)`
 
   @media only screen and (max-width: 900px) {
     flex-direction: column;
-      margin-top: 4rem;
+    margin-top: 4rem;
   }
 `;
 
@@ -73,7 +69,7 @@ export const FooterHeading = styled.h4`
   color: #ffffff;
   padding-bottom: 3rem;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 2rem;
     padding-bottom: 2rem;
   }
@@ -90,7 +86,7 @@ export const FooterLink = styled(Link)`
   font-size: 2rem;
   color: #f4f4f4;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 1.6rem;
   }
 `;
@@ -100,7 +96,7 @@ export const FooterText = styled.p`
   font-size: 2rem;
   color: #f4f4f4;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 1.6rem;
   }
 `;
@@ -129,7 +125,7 @@ export const Input = styled.input`
   width: 100%;
   margin-bottom: 1.6rem;
 
-  @media only screen and (max-width: 375px) {
+  @media only screen and (max-width: 600px) {
     font-size: 1.6rem;
   }
 `;
@@ -148,8 +144,12 @@ export const CTAButton = styledMUI(Button)`
     letter-spacing: 0;
 
     &:hover {
-        background: #E4E3E3;
+      background: #E4E3E3;
     }
+
+      @media only screen and (max-width: 600px) {
+    font-size: 1.6rem;
+  }
 `;
 
 export const FooterCopy = styled.p`
