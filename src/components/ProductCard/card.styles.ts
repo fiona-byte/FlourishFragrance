@@ -85,11 +85,7 @@ export const ProductDetailsWrapper = styled.div`
 `;
 
 export const ProductBox = styled.div`
-  padding-bottom: 3rem;
-
-  @media only screen and (min-width: 600px) {
-    padding-bottom: 3.2rem;
-  }
+  padding-bottom: 3.2rem;
 `;
 
 export const ProductName = styled.h3`
@@ -106,6 +102,7 @@ export const ProductName = styled.h3`
 
 export const ProductPrice = styled.p`
   font-size: 1.6rem;
+  font-weight: 600;
   color: #1b2021;
 
   @media only screen and (min-width: 600px) {
@@ -128,9 +125,4 @@ export const ProductButton = styledMUI(Button)`
   :hover {
     background-color: #d9b80c;
   }
-
-  // @media only screen and (min-width: 1024px) {
-  //   padding: 1.1rem 2rem;
-  //   font-size: 1.8rem;
-  // }
 `;

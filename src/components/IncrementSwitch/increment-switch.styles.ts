@@ -7,15 +7,19 @@ export const SwitchContainer = styled.div`
   padding: 0.7rem;
   background-color: #c7c5c5;
   border-radius: 42px;
-  width: 15rem;
+  width: 12.5rem;
 
   @media only screen and (max-width: 600px) {
     width: 12rem;
   }
+
+  @media only screen and (max-width: 320px) {
+    width: 10rem;
+  }
 `;
 
 export const SwitchText = styled.p`
-  font-size: 2.4rem;
+  font-size: 2rem;
   color: #0d0d0d;
   font-weight: 500;
 
@@ -25,8 +29,8 @@ export const SwitchText = styled.p`
 `;
 
 export const SwitchButton = styled.button`
-  width: 4rem;
-  height: 4rem;
+  width: 3.2rem;
+  height: 3.2rem;
   border-radius: 50%;
   border: none;
   cursor: pointer;
@@ -43,14 +47,17 @@ export const SwitchButton = styled.button`
   }
 
   & svg {
-    @media only screen and (max-width: 600px) {
-      width: 1.6rem;
-      height: 1.6rem;
-    }
+    width: 1.6rem;
+    height: 1.6rem;
   }
 
   @media only screen and (max-width: 600px) {
     width: 2.8rem;
     height: 2.8rem;
+  }
+
+  @media only screen and (max-width: 320px) {
+    width: 2.2rem;
+    height: 2.2rem;
   }
 `;
