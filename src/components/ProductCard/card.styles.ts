@@ -128,9 +128,4 @@ export const ProductButton = styledMUI(Button)`
   :hover {
     background-color: #d9b80c;
   }
-
-  // @media only screen and (min-width: 1024px) {
-  //   padding: 1.1rem 2rem;
-  //   font-size: 1.8rem;
-  // }
 `;
