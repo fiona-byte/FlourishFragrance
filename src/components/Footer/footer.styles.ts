@@ -38,7 +38,11 @@ export const FooterLogo = styled.img`
   }
 
   @media only screen and (max-width: 500px) {
-    width: 32%;
+    width: 35%;
+  }
+
+  @media only screen and (max-width: 375px) {
+    width: 45%;
   }
 `;
 
@@ -69,7 +73,7 @@ export const FooterHeading = styled.h4`
   color: #ffffff;
   padding-bottom: 3rem;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 375px) {
     font-size: 2rem;
     padding-bottom: 2rem;
   }
@@ -86,7 +90,7 @@ export const FooterLink = styled(Link)`
   font-size: 2rem;
   color: #f4f4f4;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 375px) {
     font-size: 1.6rem;
   }
 `;
@@ -96,7 +100,7 @@ export const FooterText = styled.p`
   font-size: 2rem;
   color: #f4f4f4;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 375px) {
     font-size: 1.6rem;
   }
 `;
@@ -125,7 +129,7 @@ export const Input = styled.input`
   width: 100%;
   margin-bottom: 1.6rem;
 
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 375px) {
     font-size: 1.6rem;
   }
 `;
@@ -146,10 +150,6 @@ export const CTAButton = styledMUI(Button)`
     &:hover {
       background: #E4E3E3;
     }
-
-      @media only screen and (max-width: 600px) {
-    font-size: 1.6rem;
-  }
 `;
 
 export const FooterCopy = styled.p`
