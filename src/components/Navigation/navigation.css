@@ -27,7 +27,6 @@
   outline: none;
   display: none;
   padding-left: 1.6rem;
-  padding-top: 0.1rem;
 }
 
 .navigation__container {
@@ -58,6 +57,17 @@
 @media all and (min-width: 1500px) {
   .navigation {
     padding: 1.5rem 17rem;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .navigation__link {
+    font-size: 1.8rem;
+  }
+
+  .navigation__logo {
+    width: 65%;
+    margin-left: 17.5%;
   }
 }
 
@@ -116,6 +126,7 @@
 
   .navigation__logo {
     width: 60%;
+    margin-left: 0;
   }
 }
 
@@ -125,7 +136,8 @@
   }
 
   .navigation__container {
-    width: 38vw;
+    padding: min(20vh, 8rem) 4rem;
+    width: 40vw;
   }
 
   .navigation__container .close {
@@ -139,7 +151,17 @@
     right: 2rem;
   }
 
+  .navigation__box .navigation__link {
+    margin-top: -0.6rem;
+  }
+
   .navigation__link {
     font-size: 1.6rem;
+  }
+}
+
+@media only screen and (max-width: 375px) {
+  .navigation__container {
+    width: 52vw;
   }
 }

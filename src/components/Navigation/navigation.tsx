@@ -17,9 +17,7 @@ const Navigation = () => {
     setIsOpen((prev) => !prev);
   };
 
-  const handleClickAway = () => {
-    setIsOpen(false);
-  };
+  const closeNavbar = () => setIsOpen(false);
 
   const handleStickyNav = (): void => {
     if (window.scrollY > 0) {
@@ -56,24 +54,24 @@ const Navigation = () => {
           <Hamburger />
         </button>
       </div>
-      {/* <ClickAwayListener onClickAway={handleClickAway}> */}
+      {/* <ClickAwayListener onClickAway={closeNavbar}> */}
       <div className={isOpen ? 'navigation__container open' : 'navigation__container'}>
-        <button className='navigation__btn close' onClick={() => setIsOpen(false)}>
+        <button className='navigation__btn close' onClick={closeNavbar}>
           <X />
         </button>
         <ul className='navigation__item'>
           <li className='navigation__list'>
-            <LinkH to='/#products' smooth className='navigation__link'>
+            <LinkH to='/#products' smooth className='navigation__link' onClick={closeNavbar}>
               Products
             </LinkH>
           </li>
           <li className='navigation__list'>
-            <LinkH to='/#about' smooth className='navigation__link'>
+            <LinkH to='/#about' smooth className='navigation__link' onClick={closeNavbar}>
               About
             </LinkH>
           </li>
           <li className='navigation__list'>
-            <LinkH to='/contact' smooth className='navigation__link'>
+            <LinkH to='/contact' smooth className='navigation__link' onClick={closeNavbar}>
               Contact
             </LinkH>
           </li>
@@ -91,19 +89,19 @@ const Navigation = () => {
         )}
         <ul className='navigation__item'>
           <li className='navigation__list'>
-            <Link to='/' className='navigation__link'>
+            <Link to='/' className='navigation__link' onClick={closeNavbar}>
               Wishlist
             </Link>
           </li>
           {!isMobile && (
             <li className='navigation__list'>
-              <Link to='/cart' className='navigation__link'>
+              <Link to='/cart' className='navigation__link' onClick={closeNavbar}>
                 Cart(0)
               </Link>
             </li>
           )}
           <li className='navigation__list'>
-            <Link to='/signin' className='navigation__link'>
+            <Link to='/signin' className='navigation__link' onClick={closeNavbar}>
               Sign in
             </Link>
           </li>

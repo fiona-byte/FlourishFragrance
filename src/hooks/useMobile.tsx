@@ -3,5 +3,5 @@ import { useWindowSize } from './useWindowSize';
 export const useMobile = () => {
   const { width } = useWindowSize();
 
-  return width < 767;
+  return width <= 768;
 };
