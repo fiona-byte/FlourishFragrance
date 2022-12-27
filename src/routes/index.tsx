@@ -39,7 +39,7 @@ export const routePaths: RouteProps[] = [
     Component: <ProductsPage />,
   },
   {
-    path: '/product-details',
+    path: '/product-details/:id',
     Component: <ProductDetails />,
   },
   {

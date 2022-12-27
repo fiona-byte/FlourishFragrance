@@ -1,4 +1,6 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
+import { products } from '../../data';
 import {
   ProductDescription,
   ProductDetailsGroup,
@@ -16,27 +18,47 @@ import {
   Ratings,
   ProductDetailsBox,
 } from './product-details.styles';
-import productImg from '../../assets/imgs/product img.png';
-import Heart from '../../assets/svgs/heart';
 import IncrementSwitch from '../../components/IncrementSwitch/increment-switch';
+import Heart from '../../assets/svgs/heart';
+
+type ProductProps = {
+  id: number;
+  productName: string;
+  productPrice: string;
+  productImage: string;
+  productDescription: string;
+};
 
 const ProductDetails = () => {
-  const [value, setValue] = useState<number | null>(2);
+  const [value, setValue] = useState<number | null>(4);
+  const [product, setProduct] = useState<ProductProps>();
+
+  const params = useParams();
+  const { id } = params;
+
+  useEffect(() => {
+    products.find((data) => {
+      if (data.id.toString() === id) {
+        setProduct(data);
+      }
+    });
+  }, []);
+
   return (
     <ProductDetailsContainer>
       <ProductsDetailsWrapper>
         <ProductDetailsBox>
-          <ProductImage src={productImg} alt='product' />
+          <ProductImage src={product?.productImage} alt='product' />
           <ProductDetailsImageBox>
-            <ProductDetailsImage src={productImg} alt='product' />
-            <ProductDetailsImage src={productImg} alt='product' />
-            <ProductDetailsImage src={productImg} alt='product' />
-            <ProductDetailsImage src={productImg} alt='product' />
+            <ProductDetailsImage src={product?.productImage} alt='product' />
+            <ProductDetailsImage src={product?.productImage} alt='product' />
+            <ProductDetailsImage src={product?.productImage} alt='product' />
+            <ProductDetailsImage src={product?.productImage} alt='product' />
           </ProductDetailsImageBox>
         </ProductDetailsBox>
         <div>
           <ProductDetailsGroup>
-            <ProductName>Victoria Secret Bombshell</ProductName>
+            <ProductName>{product?.productName}</ProductName>
             <Heart />
           </ProductDetailsGroup>
           <ProductDetailsGroup style={{ marginTop: '1.2rem' }}>
@@ -49,13 +71,9 @@ const ProductDetails = () => {
             />
             <ReviewsText>13 Reviews</ReviewsText>
           </ProductDetailsGroup>
-          <ProductDescription>
-            If you want to feel bougee, confident and bold without breaking the bank, then this is the perfume for you.
-            It is a fruity-floral scent with a blend of citrus, Brazilian purple passion fruit, Madagascan vanilla
-            orchid, and Italian pine
-          </ProductDescription>
+          <ProductDescription>{product?.productDescription}</ProductDescription>
           <ProductDetailsGroup>
-            <ProductPrice>₦30,000</ProductPrice>
+            <ProductPrice>{product?.productPrice}</ProductPrice>
             <IncrementSwitch />
           </ProductDetailsGroup>
           <ProductDetailsBtnContainer>
