@@ -12,12 +12,13 @@ import {
 } from './card.styles';
 
 type ProductDetails = {
+  id: number;
   productName: string;
   productPrice: string;
   productImage: string;
 };
 
-const ProductCard = ({ productImage, productName, productPrice }: ProductDetails) => {
+const ProductCard = ({ id, productImage, productName, productPrice }: ProductDetails) => {
   return (
     <ProductWrapper>
       <Favourite>
@@ -32,7 +33,7 @@ const ProductCard = ({ productImage, productName, productPrice }: ProductDetails
         />
       </ProductImageContainer>
       <ProductDetailsWrapper>
-        <Link to='/product-details'>
+        <Link to={`/product-details/${id}`}>
           <ProductBox>
             <ProductName>{productName}</ProductName>
             <ProductPrice>{productPrice}</ProductPrice>

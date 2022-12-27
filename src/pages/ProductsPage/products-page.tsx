@@ -1,5 +1,5 @@
+import { products } from '../../data';
 import ProductCard from '../../components/ProductCard/card';
-import productImg from '../../assets/imgs/product img.png';
 import {
   ProductsBox,
   ProductsContainer,
@@ -28,7 +28,15 @@ const ProductsPage = () => {
         </ProductsFilterContainer>
       </ProductsBox>
       <ProductsWrapper>
-        <ProductCard productName='Victoria Secret Bombshell' productPrice='₦10,000' productImage={productImg} />
+        {products.map(({ id, productName, productPrice, productImage }) => (
+          <ProductCard
+            key={id}
+            id={id}
+            productName={productName}
+            productPrice={productPrice}
+            productImage={productImage}
+          />
+        ))}
       </ProductsWrapper>
       <Pagination />
     </ProductsContainer>

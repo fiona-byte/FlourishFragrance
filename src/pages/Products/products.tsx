@@ -1,7 +1,7 @@
+import { products } from '../../data';
 import { ProductsHeader, ProductsContainer, ProductsLink } from './products.styles';
 import DoubleCaret from '../../assets/svgs/doubleCaret';
 import ProductCard from '../../components/ProductCard/card';
-import productImg from '../../assets/imgs/product img.png';
 
 const Products = () => {
   return (
@@ -15,9 +15,15 @@ const Products = () => {
         </ProductsLink>
       </ProductsHeader>
       <ProductsContainer>
-        <ProductCard productImage={productImg} productName='Victoria Secret Bombshell' productPrice='₦10,000' />
-        <ProductCard productImage={productImg} productName='Victoria Secret Bombshell' productPrice='₦10,000' />
-        <ProductCard productImage={productImg} productName='Victoria Secret Bombshell' productPrice='₦10,000' />
+        {products.slice(0, 4).map(({ id, productName, productPrice, productImage }) => (
+          <ProductCard
+            key={id}
+            id={id}
+            productImage={productImage}
+            productName={productName}
+            productPrice={productPrice}
+          />
+        ))}
       </ProductsContainer>
     </section>
   );

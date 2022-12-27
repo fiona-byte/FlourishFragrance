@@ -8,9 +8,7 @@ const EmptyCart = () => {
       <EmptyCartSvg className='empty-cart__svg' />
       <EmptyCartHeading>Oops</EmptyCartHeading>
       <EmptyCartSub>You do not have any items in your cart, go to products to get started</EmptyCartSub>
-      <EmptyCartButton>
-        <Link to='/products'>Products</Link>
-      </EmptyCartButton>
+      <EmptyCartButton to='/products'>Products</EmptyCartButton>
     </EmptyCartContainer>
   );
 };

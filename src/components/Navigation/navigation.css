@@ -47,7 +47,7 @@
   color: #0d0d0d;
   font-family: 'Playfair Display', serif;
   font-weight: 600;
-  font-size: 2rem;
+  font-size: 1.8rem;
 }
 
 .navigation__logo {
@@ -61,10 +61,6 @@
 }
 
 @media only screen and (max-width: 900px) {
-  .navigation__link {
-    font-size: 1.8rem;
-  }
-
   .navigation__logo {
     width: 65%;
     margin-left: 17.5%;

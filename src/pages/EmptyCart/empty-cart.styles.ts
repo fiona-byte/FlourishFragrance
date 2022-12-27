@@ -1,6 +1,5 @@
 import styled from 'styled-components';
-import { styled as styledMUI } from '@mui/material/styles';
-import { Button } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 export const EmptyCartContainer = styled.div`
   padding: 7rem 8rem;
@@ -44,7 +43,7 @@ export const EmptyCartHeading = styled.h2`
 `;
 
 export const EmptyCartSub = styled.p`
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
   color: #0d0d0d;
   margin: 0.8rem 0 4rem;
@@ -56,22 +55,19 @@ export const EmptyCartSub = styled.p`
   }
 `;
 
-export const EmptyCartButton = styledMUI(Button)`
+export const EmptyCartButton = styled(Link)`
   padding: 1.2rem 3.2rem;
   border-radius: 8px;
   font-weight: 600;
-  font-size: 2rem;
-  background-color: #0D0D0D;
+  font-size: 1.8rem;
+  background-color: #0d0d0d;
+  color: #f4f4f4;
   display: flex;
   align-item: center;
   justify-content: center;
   text-transform: unset;
   width: 20%;
   margin: 0 auto;
-
-  a {
-      color: #F4F4F4;
-  }
 
   &:hover {
     background-color: #0d0d0d;
@@ -83,6 +79,6 @@ export const EmptyCartButton = styledMUI(Button)`
 
   @media only screen and (max-width: 500px) {
     width: 50%;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
   }
 `;
