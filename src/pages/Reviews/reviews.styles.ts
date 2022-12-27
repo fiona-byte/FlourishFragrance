@@ -116,7 +116,7 @@ export const ReviewsIconContainer = styled.div`
 `;
 
 export const ReviewsIconButton = styled.button`
-  padding: 1.2rem 1.6rem;
+  padding: 1rem 1.4rem;
   outline: none;
   border: none;
   cursor: pointer;
@@ -129,7 +129,7 @@ export const ReviewsIconButton = styled.button`
   }
 
   @media only screen and (max-width: 500px) {
-    padding: 1rem 1.2rem;
+    padding: 1rem;
   }
 `;
 
